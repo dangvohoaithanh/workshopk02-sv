@@ -1,0 +1,16 @@
+
+
+mat-form-field{
+    float: left;
+  width: 50%;
+  padding: 10px;
+  
+}
+.checkbox{
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+.dialogAdd{
+  display: block!important;
+}

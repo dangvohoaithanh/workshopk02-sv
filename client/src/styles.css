@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Roboto', sans-serif; }
+
+.button-area{
+    text-align: right; 
+}
+
+.btn-search{
+    text-align: right; 
+    margin: 20px!important;
+}
+.btn-search button{
+    
+    margin-right: 10px!important;
+}
+
+.selected{
+    background-color: rgba(148, 209, 245, 0.6)
+}
+.mat-form-field{
+    display: block!important;
+    padding-right: 10px;
+}
+mat-form-field[_ngcontent-c16]{
+    padding: 0!important;
+    padding-right: 2em!important;
+}
+
+.btn-close{
+    text-align: right;
+}
+
+.mat-menu-item{
+    line-height: 0px!important;
+    border: none!important;
+    height: 30px!important;
+    outline-color: none!important;
+}
+.mat-menu-item:hover{
+    border: none;
+    
+    color: #006fff;
+}
+.mat-menu-item:focus{
+outline: none!important;
+}
+.iconmenu{
+    margin-right: 10px!important;
+}
+button:focus{
+    outline: none!important;
+}
+
+.input {
+    width: 40%;
+    
+}
+.LoadingBox{
+
+    position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+}
+.Loading{
+    margin-left: 50%;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.loading-modal >
+    mat-dialog-container {
+        padding: auto;
+        overflow: unset;
+        background: #0a369a0d;
+    }
+
+.loading-modal {
+    max-width: 100%!important;
+    max-height: 100%!important;
+    width: 100%!important;
+    height: 100%!important;
+    border-radius: 0!important;
+    margin:auto!important;
+}

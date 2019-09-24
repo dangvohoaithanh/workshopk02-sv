@@ -1,0 +1,21 @@
+.inline-loader {
+    display: inline-block;
+  }
+
+
+  .inline-loader {
+    display: inline-block;
+  }
+  
+  .version {
+    margin: 0;
+  }
+  
+  .login-container,
+  .mat-form-field {
+    width: 100%;
+  }
+  .login{
+      width: 20%;
+      margin: auto!important;
+  }

@@ -1,0 +1,64 @@
+<div class="add" [formGroup]="addForm" novalidate>
+  <div class="col-12" class="btn-close">
+    <button (click)="closeDialog()" color="primary" mat-icon-button>
+      <mat-icon>highlight_off</mat-icon>
+    </button>
+  </div>
+  <div fxFlexAlign="start">
+    <div fxLayout="column" fxLayoutAlign="space-around center" class="dialogAdd">
+      <mat-form-field>
+        <input matInput placeholder="Name" #name formControlName="name" [(ngModel)]="model.name" required>
+        <mat-error *ngIf="addForm.controls.name.invalid">Name is required</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Date of Birth" #date formControlName="date"
+        [(ngModel)]="model.dateofbirth" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="addForm.controls.date.invalid">Date is required</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Username" (blur)="onBlurCode()" #user formControlName="user" [(ngModel)]="model.userid" required>
+        <mat-error *ngIf="addForm.controls.user.invalid">Username is required</mat-error>
+    
+        <ng-template #elseBlock>yes</ng-template>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Password" #pass formControlName="pass" [(ngModel)]="model.password" required>
+        <mat-error *ngIf="addForm.controls.pass.invalid">Password is required</mat-error>
+      </mat-form-field>
+      
+      <mat-form-field>
+        <input matInput placeholder="ID Card" #id formControlName="id" [(ngModel)]="model.idcard" required>
+        <mat-error *ngIf="addForm.controls.id.invalid">ID is required</mat-error>
+      </mat-form-field>
+      <div class="checkbox" style="width: 50%;">
+        <mat-checkbox class="checkbox" #isleader formControlName="isleader" [(ngModel)]="model.isleader">
+          <span>Supervisor</span>
+        </mat-checkbox>
+      </div>
+      <mat-form-field style="width: 100%">
+        <textarea matInput placeholder="Address" #address formControlName="address" [(ngModel)]="model.address"
+          required></textarea>
+        <mat-error *ngIf="addForm.controls.address.invalid">Address is required</mat-error>
+      </mat-form-field>
+      
+      
+    </div>
+    <div class="button-area" style="width: 100%;display: flow-root;">
+      <button mat-flat-button (click)="save()" [disabled]="(addForm.invalid || !flagSave)">
+        <mat-icon>save</mat-icon>
+        Save
+      </button>
+    </div>
+    
+    
+  </div>
+  
+
+  <!-- <mat-checkbox class="checkbox" [checked]="isleader" onclick="return false;">
+  </mat-checkbox> -->
+
+
+
+</div>

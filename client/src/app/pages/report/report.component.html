@@ -1,0 +1,17 @@
+<button mat-button color="primary" [matMenuTriggerFor]="report">
+  <mat-icon>print</mat-icon>
+  Report
+</button>
+
+<mat-menu class="context" #report="matMenu">
+  <button mat-menu-item (click)="reportPDF()">  
+      Pdf
+  </button>
+  <button mat-menu-item >
+      Excel
+      
+  </button>
+  <button mat-menu-item >
+      Excel Online
+  </button>
+</mat-menu>

@@ -1,0 +1,16 @@
+<div class="col-12" class="btn-close">
+  <button (click)="onNoClick()" color="primary" mat-icon-button>
+    <mat-icon>highlight_off</mat-icon>
+  </button>
+</div>
+<b>
+  ARE YOU CONTINUE?
+</b>
+
+<!-- <div mat-dialog-content>
+    <p style="text-transform: uppercase;">{{'HR006.ARE_YOU_SURE_YOU_WANT_TO_CONTINUE' | translate}}</p>
+  </div> -->
+<div style="text-align: right; display: block;" class="button-area" mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Ok</button>
+  <button mat-button mat-dialog-close>Cancel</button>
+</div>

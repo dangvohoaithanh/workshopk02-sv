@@ -1,0 +1,74 @@
+﻿@model System.Collections.Generic.List<HRM.Models.EmployeesDTO>
+
+<html>
+<head>
+    <link href="~/css/Employee.css" type="text/css" rel="stylesheet" />
+        
+</head>
+<body>
+    <div class="invoice-box">
+        <table cellpadding="0" cellspacing="0">
+            <tr class="top">
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td class="title">
+                                <img src="~/img/logo.png" style="width:100%; max-width:300px;" />
+                            </td>
+                            <td>
+
+                                <br> Created: @DateTime.Now.ToShortDateString()
+                                
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            @*<tr class="information ">
+                    <td colspan="2 ">
+                        <table>
+                            <tr>
+                                <td>@Model.<br>
+                                    @Model.Seller.Road<br>
+                                    @Model.Seller.Country
+                                </td>
+                               <td>@Model.Buyer.Name<br>
+                                   @Model.Buyer.Road<br>
+                                   @Model.Buyer.Country
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>*@
+            <tr class="heading ">
+                <th>Name</th>
+                <th>UserName</th>
+                <th>Password</th>
+                <th>ID card</th>
+                <th>Leader</th>
+                <th>Address</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+            <tr class="item">
+                <td>@item.Name</td>
+                <td>@item.Userid</td>
+                <td>@item.Password</td>
+                <td>@item.Idcard</td>
+                <td class="leader"><input type="checkbox" checked=@item.Isleader> </td>
+                <td>@item.Address</td>
+                    
+            </tr>
+            }
+
+                @*<tr class="total ">
+                    <td></td>
+                    <td>
+                        Total: @Model.Items.Sum(i => i.Price)
+                    </td>
+                </tr>*@
+        </table>
+    </div>
+</body>
+</html>
